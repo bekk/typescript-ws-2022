@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import { ChakraProvider } from '@chakra-ui/react'
-import LunchForm from './oppgave-2/LunchForm';
 import { Heading } from '@chakra-ui/react'
+import Hvem from './oppgave-2/Oppgave2';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Heading>Lunsjbestilling Skuret</Heading>
         <header className="App-header">
-         <LunchForm/>
+         <Hvem/>
         </header>
       </div>
   </ChakraProvider>
