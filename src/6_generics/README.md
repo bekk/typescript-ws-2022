@@ -15,3 +15,44 @@ export const firstFiveElements = <T>(array: Array<T>): Array<T> => {
 }
 ```
 Sender du nå inn en liste av strings vet du at du får en liste av strings tilbake også.
+
+### Generiske typer med forbehold
+Noen ganger ønsker vi å sette noen forbehold for den generiske verdien. La oss ta for oss følgende funksjon:
+
+```js
+const getLength = <T>(input: T): number => {
+    return input.length; // dette vil gi feil!
+}
+```
+Vi vet at input skal ha en property som heter length, men resten av input vet vi ingenting om. For å sette noen restriksjoner rundt hva T kan være kan vi skrive `T extends` (og typen vi vet noe om).
+
+```js
+type LengthType = {
+    length: number;
+}
+const getLength = <T extends  LengthType>(input: T): number => {
+    return input.length;
+}
+```
+Nå kan denne metoden kalles med et array som input siden arrays har en length-property. Den kan også kalles med et egendefinert objekt hvis vi har definert at objektet har en length-property.
+
+### Hent ut en prop på en generisk type
+Hvis vi skal aksessere en property på en generisk type kan vi bruke `keyof` operatoren. Dette blir også kalt for en index access type. I koden nedenfor har vi definert `K extends keyof T`. Da er K en key som finnes på det ukjente typen T.
+
+```js
+const getValue = <T, K extends keyof T>(obj: T, key: K): T[K] => {
+    return obj[key];
+}
+```
+Vi kan så bruke metoden slik:
+```js
+const person = {
+    name: 'tom',
+    age: 5
+}
+const result = getValue(person, 'age');
+console.log(typeof result) // skal gi number
+const noResult = getValue(person, 'not a key'); // skal gi error fordi kun "name" og "age" er gyldige keys på personobjektet
+
+```
+
