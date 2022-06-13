@@ -21,6 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "5": "tsc src/5_typeguard/oppgaver.ts",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
