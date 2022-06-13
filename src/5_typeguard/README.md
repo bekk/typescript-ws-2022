@@ -35,7 +35,6 @@ Andre operatorer som også kan brukes som type guards kan du lese mer om her:
 - [📘 instanceOf](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#instanceof-narrowing)
 - [📙 in](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-in-operator-narrowing)
 
-📚 Disse kan du lese mer om på 
 
 
 
