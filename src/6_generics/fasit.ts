@@ -1,8 +1,6 @@
 export {};
 
-// OPPGAVE 1
-
-// ----- FASIT -----
+// OPPGAVE 1 - FASIT
 
 const returnInput = <T>(input: T) => {
     return input;
@@ -10,9 +8,7 @@ const returnInput = <T>(input: T) => {
 
 
 
-// OPPGAVE 2
-
-// ----- FASIT -----
+// OPPGAVE 2 - FASIT
 
 const sortById = <T extends {id: number}>(data: Array<T>): Array<T> => {
     return data.sort((a,b) => a.id - b.id);
@@ -22,9 +18,7 @@ const sortedResult = sortById(unsortedData);
 console.log(sortedResult); // skal nå være sortert etter id
 
 
-// OPPGAVE 3
-
-// ----- FASIT -----
+// OPPGAVE 3 - FASIT
 
 type Menu = {
     name: string;

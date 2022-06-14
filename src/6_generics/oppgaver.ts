@@ -1,6 +1,6 @@
 export {};
 
-// OPPGAVE 1
+// OPPGAVE 1 - Generiske typer
 
 // Gjør om så funksjonen returnerer samme type som man sendte inn
 const returnInput = (input: any) => {
@@ -8,7 +8,7 @@ const returnInput = (input: any) => {
 }
 
 
-// OPPGAVE 2
+// OPPGAVE 2 - Generiske typer med forbehold
 
 // Gjør om slik at vår generiske verdi må inneholde en id som er et tall
 const sortById = <T>(data: Array<T>): Array<T> => {
@@ -20,7 +20,7 @@ const sortedResult = sortById(unsortedData);
 console.log(sortedResult); // skal nå være sortert etter id
 
 
-// OPPGAVE 3
+// OPPGAVE 3 - Hent ut en prop på en generisk type
 
 type Menu = {
     name: string;
