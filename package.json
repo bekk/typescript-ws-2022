@@ -14,6 +14,7 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "framer-motion": "^6.3.3",
+    "is-vegan": "^1.2.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -22,6 +23,7 @@
   },
   "scripts": {
     "5": "tsc src/5_typeguard/oppgaver.ts",
+    "7": "tsc src/7_declaration/oppgaver.ts",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
