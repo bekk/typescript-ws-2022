@@ -1,4 +1,4 @@
-### Type Guards
+# Type Guards
 
 Type Guards er spesielle operatorer/funksjoner som hjelper til å utlede hvilken type variablen en har innenfor en conditional block. Dette kan også kalles å _narrow down_ typen.
 
@@ -38,7 +38,7 @@ Andre operatorer som også kan brukes som type guards kan du lese mer om her:
 
 
 
-### Brukergenererte type guards
+## Brukergenererte type guards
 Noen ganger holder det ikke med de innbygde operatorene og da kan brukergenerete type guards være veldig nyttig. En brukergenerert type guards er egentlig kun en funksjon der returtypen er en _type predicate_. 
 I eksempelet under er `isFish` en type guard der returtypen er `pet is Fish` som er en `type predicate`. En _type predicate_ er på formatet `parameterName is Type`.
 
