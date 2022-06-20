@@ -7,69 +7,99 @@ TypeScript tilbyr mange ulike _Utility Types_ for å lettere kunne gjøre _trans
 `Partial<Type>` gjør det mulig å definere en type med alle attributtene til `Type` satt til optional. Dette kan være nyttig når man lager oppdateringslogikk for et objekt.
 
 ```typescript
-interface Point {
-  x: number;
-  y: number;
-}
+type Menu = {
+  title: string;
+  price: number;
+  discount?: number;
+};
 
-let pointPart: Partial<Point> = {}; // `Partial` tillater x og y å være optional
-pointPart.x = 10;
+type PartialMenu = Partial<Menu>;
+
+// Dette resulterer i følgende type:
+
+// type PartialMenu = {
+//   title?: string;
+//   price?: number;
+//   discount?: number;
+// };
+
+const PizzaMenu: PartialMenu = { title: "pizza" };
 ```
 
 ## Required
 
-Required-typen gjør det motsatte av Partial-typen. `Required<Type>` konstruerer en type med alle attributtene til `Type` satt til required.
+Required gjør det motsatte av Partial. `Required<Type>` konstruerer en type med alle attributtene til `Type` satt til required.
 
 ```typescript
-type PartialUser = {
-  name: string;
-  age: number;
-  address?: string;
-  occupation?: string;
+type Menu = {
+  title: string;
+  price: number;
+  discount?: number;
 };
 
-type User = Required<PartialUser>;
+type RequiredMenu = Required<Menu>;
 
 // Dette resulterer i følgende type:
 
-// type User = {
-//   name: string;
-//   age: number;
-//   address: string;
-//   occupation: string;
-// }
+// type RequiredMenu = {
+//   title: string;
+//   price: number;
+//   discount: number;
+// };
+
+const PizzaMenu: RequiredMenu = { title: "pizza", price: 159, discount: 10 };
 ```
 
 ## Record
 
-Record-typen er en rask og praktisk måte å definere en objekttype på, men en spesifikk keys-type og value-type. `Record<Keys, Type>` konstruerer en type med keys: `Keys` og verdier: `Type`.
+Record er en rask og praktisk måte å definere en objekttype på, med en spesifikk keys-type og value-type. `Record<Keys, Type>` konstruerer en type med keys: `Keys` og verdier: `Type`.
 
 ```typescript
-interface CatInfo {
-  age: number;
-  breed: string;
-}
+type RestaurantInfo = {
+  id: number;
+  booking: boolean;
+  numberOfTables: number;
+};
 
-type CatName = "miffy" | "boris" | "mordred";
+type RestaurantNames = "smalhans" | "kolonialen" | "lorry";
 
-const cats: Record<CatName, CatInfo> = {
-  miffy: { age: 10, breed: "Persian" },
-  boris: { age: 5, breed: "Maine Coon" },
-  mordred: { age: 16, breed: "British Shorthair" },
+const restaurants: Record<RestaurantNames, RestaurantInfo> = {
+  smalhans: { id: 1, booking: true, numberOfTables: 15 },
+  kolonialen: { id: 2, booking: true, numberOfTables: 8 },
+  lorry: { id: 3, booking: false, numberOfTables: 25 },
+};
+```
+
+## Pick
+
+Pick brukes for å "plukke ut" et sett av attributter fra en annen type. `Pick<Type, Keys>` konstruerer en type ved å plukke ut attributtene `Keys` (union av strings) fra `Type`.
+
+```typescript
+type Todo = {
+  title: string;
+  description: string;
+  completed: boolean;
+};
+
+type TodoPreview = Pick<Todo, "title" | "completed">;
+
+const todo: TodoPreview = {
+  title: "Clean room",
+  completed: false,
 };
 ```
 
 ## Omit
 
-Beskrivelse
+Omit er på mange måter det motsatte av Pick. `Omit<Type, Keys>` konstruerer en ny type ved å kopiere alle attributtene til `Type`, og fjerne de som ligger i `Keys`. Defineres på samme måte som for Pick.
 
 ```typescript
-interface Todo {
+type Todo = {
   title: string;
   description: string;
   completed: boolean;
   createdAt: number;
-}
+};
 
 type TodoPreview = Omit<Todo, "description">;
 
@@ -77,25 +107,6 @@ const todo: TodoPreview = {
   title: "Clean room",
   completed: false,
   createdAt: 1615544252770,
-};
-```
-
-## Pick
-
-Beskrivelse
-
-```typescript
-interface Todo {
-  title: string;
-  description: string;
-  completed: boolean;
-}
-
-type TodoPreview = Pick<Todo, "title" | "completed">;
-
-const todo: TodoPreview = {
-  title: "Clean room",
-  completed: false,
 };
 ```
 
