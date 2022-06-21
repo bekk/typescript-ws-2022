@@ -18,7 +18,7 @@ function add(a: any, b: any) {
 // 'forrett': drikke, matType (to valg - enten 'vegetar' eller 'kjøtt')
 // 'hovedrett': drikke, matType og tilbehør
 // 'dessert': drikke og en ikke-obligatorisk egenskap på om desserten skal være vegansk.
-// Definer en type som heter 'Middag' og som er en intersection type av 'forrett', 'hovedrett' og 'dessert'.
+// Definér en type som heter 'Middag' og som er en intersection type av 'forrett', 'hovedrett' og 'dessert'.
 // (EKSTRA) Hva er konsekvensene av å bruke et objekt av typen 'Middag' til å representere en hel middag?
 
 // Oppgave 3:
