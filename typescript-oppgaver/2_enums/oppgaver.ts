@@ -1,8 +1,8 @@
-// Oppgave 1: Lag en type som definerer et måltid med egenskapene 'verdenskjøkken'
+// Oppgave 1: Lag en enum som definerer et måltid med egenskapene 'verdenskjøkken'
 // (f.eks. italiensk, thai, kinesisk) og 'kjøttType' (f.eks. svin, okse, lam eller kylling))
 
 // Oppgave 2
-// Hvilke to muligheter har vi på å sette c.kind til for at feilen skal forsvinne?
+// Hvilke to muligheter har vi på å sette c.kind til, for at feilen skal forsvinne?
 enum ShapeKind {
   Circle,
   Square,
@@ -19,7 +19,7 @@ interface Square {
 }
 
 let c: Circle = {
-  kind: ShapeKind.Square,
+  kind: ShapeKind.Square, // Hva kan vi sette kind til?
   radius: 100,
 };
 
