@@ -1,16 +1,4 @@
 // Oppgave 1
-type inputParams = string | number;
-function add(a: inputParams, b: inputParams) {
-  if (typeof a === "number" && typeof b === "number") {
-    return a + b;
-  }
-  if (typeof a === "string" && typeof b === "string") {
-    return a.concat(b);
-  }
-  throw new Error("Parameters must be numbers or strings");
-}
-
-// Oppgave 2
 
 enum MatType {
   VEGETAR = "Vegetar",
@@ -43,7 +31,7 @@ type Middag = Forrett & Hovedrett & Dessert;
 // består av samme drikke og matType til både forret, hovedrett og dessert og man får ikke
 // velge tilbehør eller vegansk dessert
 
-// Oppgave 3:
+// Oppgave 2:
 enum SpritType {
   VODKA = "Vodka",
   SNAPS = "Snaps",
@@ -51,3 +39,16 @@ enum SpritType {
 }
 
 type UtvidetMiddag = Middag & { spritType: SpritType; antallEnheter: number };
+
+// Oppgave 3
+type inputParams = string | number;
+function add(a: inputParams, b: inputParams) {
+  if (typeof a === "number" && typeof b === "number") {
+    return a + b;
+  }
+  if (typeof a === "string" && typeof b === "string") {
+    return a.concat(b);
+  }
+  throw new Error("Parameters must be numbers or strings");
+}
+
