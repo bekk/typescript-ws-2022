@@ -1,4 +1,4 @@
-# Oppgave 2 - TypeScript enums
+# Oppgave 2 - TypeScript _enums_
 
 ## Intro
 
@@ -14,7 +14,7 @@ type Matrett {
 
 Her definerer vi et objekt hvor alle egenskapene er av typen `string`.
 
-_Enums_ er en måte å definere navngitte konstanter på som vi kan bruke i f.eks. objekter av typen `Matrett`. Enums er en datastruktur som har konstant lengde og som inneholder konstante verdier. Navnet kommer fra _enumerated types_ og er nyttig å bruke når det er meningen at f.eks. inputparametre til en funksjon bare skal kunne ha én verdi fra et spesielt utvalg av flere mulige verdier.
+_Enums_ er en måte å definere navngitte konstanter på som vi kan bruke i f.eks. objekter av typen `Matrett`. _Enums_ er en datastruktur som har konstant lengde og som inneholder konstante verdier. Navnet kommer fra _enumerated types_ og er nyttig å bruke når det er meningen at f.eks. inputparametre til en funksjon bare skal kunne ha én verdi fra et spesielt utvalg av flere mulige verdier.
 
 ## Definere enums
 
@@ -101,7 +101,7 @@ Hest = 'Hest'
 
 ## Hvordan kompileres `enum`s til JavaScript?
 
-La oss ta for oss følgende `enum`:
+La oss ta for oss følgende enum:
 
 ```
 enum Fisker {
