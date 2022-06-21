@@ -1,6 +1,7 @@
 // Oppgave 1:
 // Skriv om funksjonen slik at inputparametrene a og b er en union type av string og number.
-// Hva må du erstatte '??' med for at funksjonen skal returnere? (Tips --> sjekk ut typeof) 
+// Hva må du erstatte '??' med for at funksjonen skal returnere? (Tips --> sjekk ut hvordan 
+// du kan bruke 'typeof' til din fordel) 
 
 function add(a: any, b: any) {
   if (??) {
