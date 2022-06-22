@@ -23,7 +23,7 @@ I hver mappe finner du tre filer; `README.md`, `oppgaver.ts`og `fasit.ts`. Vi an
 
 Del 2 gir en innføring i TypeScript i et React-prosjekt.
 
-[Oppgave 8: React](react-typescript-oppgaver/README.md)
+[Oppgave 9: React](react-typescript-oppgaver/README.md)
 
 ### Ferdig?
 
