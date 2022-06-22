@@ -36,4 +36,6 @@ På samme måte som typeannotasjoner på variabler vil TypeScript som regel _aut
 
 ## Ressurser
 
-1. [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+Ta gjerne en rask titt på denne lenken om du er ny i TypeScript:
+
+[Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
