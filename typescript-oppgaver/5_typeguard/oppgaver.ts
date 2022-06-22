@@ -2,8 +2,6 @@
 // OPPGAVE: Lag brukerdefinerte typeguards for de tre ulike lunsjtypene. Slik at getLunsj kan output riktig informasjon
 
 
-
-
 // I denne oppgaven trenger  vi litt lunsjtyper. De ulike lunsjrett-typene har noen variabler til felles, 
 // men også noen unike variabler til sin type.
 type VerdensKjøkkenType = 'ASIATISK' | 'ITALIENSK' | 'FRANSK' | 'INDISK' | 'MEKSIKANSK' | 'NORSK';
@@ -41,8 +39,6 @@ const lunsjRetter: LunsjRett[] = [
     { navn: "Tikka Masala", allergener: ["laktose", 'nøtter'], antallGangerServert: 10, verdensKjøkken: 'INDISK', kjøtt: 'KYLLING' },
     { navn: "Loaded veggie nachos", allergener: [], antallGangerServert: 2, verdensKjøkken: 'MEKSIKANSK', isMedBønner: true, antallGrønnsaker: 6 }
 ]
-
-
 
 
 export const getLunsj = (lunsjRetter: LunsjRett[]): void => {

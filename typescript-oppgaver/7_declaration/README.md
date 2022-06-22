@@ -1,5 +1,5 @@
 # Type declaration
-_Type declaration files_ er egne typescript-filer som kun inneholder type informasjon. De har filnavn på typen `<filnavn>.d.ts`. Slike filer brukes for å legge til typer på Javascript-pakker. 
+_Type declaration files_ er egne TypeScript-filer som kun inneholder type informasjon. De har filnavn på typen `<filnavn>.d.ts`. Slike filer brukes for å legge til typer på Javascript-pakker. 
 
 
 ## DefinitelyTyped 
@@ -10,8 +10,8 @@ _Type declaration files_ er egne typescript-filer som kun inneholder type inform
 npm install --save-dev @types/react
 ```
 
-Noen npm-pakker har inkludert deklarasjonsfiler i pakken. Da er det ikke nødvedig å laste ned korresponderende `@types/`-pakke,
- `date-fns` pakker med typedeklarasjonfiler så 
+Noen npm-pakker har inkludert deklarasjonsfiler i pakken. Da er det ikke nødvedig å laste ned korresponderende `@types/`-pakke. For eksempel så pakker
+ `date-fns` med typedeklarasjonfiler. 
 
 
 ## Lage egne deklarasjonsfiler
