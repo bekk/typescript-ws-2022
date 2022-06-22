@@ -1,4 +1,4 @@
-## TypescripWS
+## TypescriptWS
 
 Velkommen til workshop! 👨‍💻
 
