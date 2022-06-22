@@ -6,6 +6,7 @@ let isActive: boolean = true;
 
 let status: string = `Covid-19 er ${age} år og ${ isActive ? 'er fortsatt aktiv :(' : 'er ikke lenger aktiv :)' }`;
 
+console.log(status);
 
 // Oppgave 2. Sett på typer slik at det ikke er noen feil, men det som er kommentert ut gir feil.
 
