@@ -1,18 +1,15 @@
 // Oppgave 1. Sett typer på variablene under
-// Som i JavaScript er alle tall i TypeScript float behind the hood.
 
-let age = 0.5;
+let age: number = 0.5;
 
-let isActive = true;
+let isActive: boolean = true;
 
-let status = `Covid-19 er ${age} år og ${ isActive ? 'er fortsatt aktiv :(' : 'er ikke lenger aktiv :)' }`;
-
-console.log(status);
+let status: string = `Covid-19 er ${age} år og ${ isActive ? 'er fortsatt aktiv :(' : 'er ikke lenger aktiv :)' }`;
 
 
 // Oppgave 2. Sett på typer slik at det ikke er noen feil, men det som er kommentert ut gir feil.
 
-export function hello(name) {
+function hello(name: string): string {
     return `Hello ${name}`;
 }
 
@@ -20,7 +17,7 @@ hello('Bob');
 //hello([1, 2, 3]); // Skal gi feil om du kommenterer inn.
 
 
-export function square(baseValue) {
+function square(baseValue: number) : number {
     return baseValue * baseValue
 }
 
@@ -28,23 +25,23 @@ square(3);
 // square('hello'); // Skal gi feil om du kommenterer inn.
 
 
-export function mySalary([name, salary]) {
+function mySalary(name : string, salary : number) : string {
     return `My name is ${name}, and I make ${salary}$ each year`;
 }
 
-mySalary(["Messi", 41000000])
-//mySalary([60000, "Chris"]) // Skal gi feil om du kommenterer inn.
+mySalary("Messi", 41000000)
+//mySalary(60000, "Chris") // Skal gi feil om du kommenterer inn.
 
-export function returnNothing() {
+export function returnNothing() : void {
     console.log("Sometimes we don't return anything!")
 }
 
 // Oppgave 3. Hvorfor er det lov å kalle anythingCanBeAny(5) og anythingCanBeAny('heisann')?
 // Sett typer på funksjonen så det er synlig hva som skjer (trenger ikke være logisk kode).
-export function anythingCanBeAny(anything) {
+export function anythingCanBeAny(anything : any) : any {
     return anything
 }
 
-const a = anythingCanBeAny(5);
+const a: number = anythingCanBeAny(5);
 
-const b = anythingCanBeAny('heisann');
+const b: string = anythingCanBeAny('heisann');

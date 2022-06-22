@@ -14,16 +14,21 @@ Eksempel:
 
 ## Funksjoner
 
-TypeScript gjør det mulig å spesifisere typene til både input- og ouput-verdiene til funksjoner. Dette kjenner vi igjen fra objektorienterte språk som f.eks. Java.
+TypeScript gjør det mulig å spesifisere typene til både input- og ouput-verdiene til funksjoner.
 
 ### Typeannotasjoner på input-parametre
 
 Når du deklarerer en funksjon kan du legge til typeannotasjoner på input-parametre, for å definere hvilke typer parametre funksjonen godtar. TypeScript vil da sjekke argumentene du sender inn til denne funksjonen.
 
-Eksempel:  
-`function hello(name: string) { console.log("Hello, " + name.toUpperCase()); }`
+Eksempel:
 
-`hello(21)` vil resultere i en advarsel og kompileringsfeil.
+```typescript
+function hello(name: string) {
+  console.log("Hello, " + name.toUpperCase());
+}
+
+hello(21); //vil resultere i en advarsel og kompileringsfeil.
+```
 
 ### Returtypeannotasjoner
 
