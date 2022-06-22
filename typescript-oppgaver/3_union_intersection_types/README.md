@@ -15,7 +15,7 @@ I TypeScript er definisjonen noe annerledes. Union types brukes til å komponere
 
 _Intersection types_ defineres med symbolet `&` og kan leses som `And`-operatoren. Definerer man en _intersection type_ av to eller flere eksisterende typer A og B, kombinerer man alle egenskapene i A og B til én ny type.
 
-```
+```typescript
 type A {
     m: string,
     a: number,
