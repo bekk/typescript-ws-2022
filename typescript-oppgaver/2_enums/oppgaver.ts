@@ -40,3 +40,5 @@ function f(x: E) {
     //
   }
 }
+
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */
