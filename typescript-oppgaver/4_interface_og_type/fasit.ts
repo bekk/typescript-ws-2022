@@ -1,5 +1,3 @@
-export {};
-
 // OPPGAVE 1 - FASIT
 
 type Menu = {
@@ -57,3 +55,5 @@ const printNames = (names: Array<string> | string): void => {
     console.log(names);
     }
 }
+
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

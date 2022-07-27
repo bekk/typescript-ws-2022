@@ -1,5 +1,3 @@
-export {};
-
 // OPPGAVE 1
 // Lag en type eller et interface som beskriver følgende objekt:
 
@@ -44,4 +42,4 @@ printNames(['tom', 'jerry']); // OK
 
 printNames(123) // denne skal gi feil!
 
-
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

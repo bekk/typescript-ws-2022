@@ -50,3 +50,5 @@ type Person = {
 type BasicUser = Pick<Person, "name" | "age">
 
 const rex: BasicUser = {name: "Kong Harald", age: 85}
+
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

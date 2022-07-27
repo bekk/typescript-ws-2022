@@ -1,4 +1,3 @@
-export { }
 // Denne fasit-filen måtte være kommentert ut for å ikke være i konflikt med oppgaven.
 
 // Lag en fil som feks. heter index.d.ts med følgende innhold
@@ -12,3 +11,5 @@ export { }
 //     }
 //     export function checkIngredients(ingredientsToCheck: string[]): CheckIngridientReturnType
 // }
+
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

@@ -1,4 +1,3 @@
-export {}
 // OPPGAVE 1
 
 // Bruk en passende utility type for å definere typen til objektet navigationInfo (fjern any).
@@ -30,3 +29,4 @@ type Person = {
 
 const rex: any = {name: "Kong Harald", age: 85}
 
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

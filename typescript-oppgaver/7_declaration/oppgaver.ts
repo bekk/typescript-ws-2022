@@ -16,3 +16,5 @@ isVegan.isVeganIngredient('soy');
 isVegan.isVeganIngredientList(['milk', 'tomato'])
 
 console.log(isVegan.checkIngredients(['cheese', 'apple', 'bread']))
+
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

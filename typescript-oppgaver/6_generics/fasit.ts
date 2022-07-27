@@ -1,5 +1,3 @@
-export {};
-
 // OPPGAVE 1 - FASIT
 
 const returnInput = <T>(input: T) => {
@@ -30,5 +28,4 @@ const getMenyValue = <K extends keyof Menu>(menu: Menu, key: K): Menu[K] => {
     return menu[key];
 }
 
-
-
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

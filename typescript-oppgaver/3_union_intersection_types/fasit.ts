@@ -52,3 +52,5 @@ function add(a: inputParams, b: inputParams) {
   throw new Error("Parameters must be numbers or strings");
 }
 
+
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

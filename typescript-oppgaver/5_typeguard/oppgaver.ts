@@ -1,4 +1,3 @@
-
 // OPPGAVE: Lag brukerdefinerte typeguards for de tre ulike lunsjtypene. Slik at getLunsj kan output riktig informasjon
 
 
@@ -52,5 +51,4 @@ export const getLunsj = (lunsjRetter: LunsjRett[]): void => {
 
 getLunsj(lunsjRetter);
 
-
-
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

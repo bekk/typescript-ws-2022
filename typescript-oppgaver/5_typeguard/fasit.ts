@@ -1,5 +1,3 @@
-
-
 type VerdensKjøkkenType = 'ASIATISK' | 'ITALIENSK' | 'FRANSK' | 'INDISK' | 'MEKSIKANSK' | 'NORSK';
 type KjøttType = 'KYLLING' | 'SVIN' | 'STORFE' | 'KJØTTDEIG' | 'PØLSE';
 enum FiskArtType { 'LAKS' = 'laks', 'ØRRET' = 'ørret', 'HYSE' = 'hyse', 'TORSK' = 'torsk', 'SEI' = 'sei' }
@@ -62,3 +60,5 @@ export const getLunsj = (lunsjRetter: LunsjRett[]): void => {
 };
 
 getLunsj(lunsjRetter);
+
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

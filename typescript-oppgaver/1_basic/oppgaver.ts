@@ -1,5 +1,3 @@
-export {};
-
 // Oppgave 1. Sett typer på variablene under
 // Som i JavaScript er alle tall i TypeScript float behind the hood.
 
@@ -50,3 +48,5 @@ function anythingCanBeAny(anything) {
 const a = anythingCanBeAny(5);
 
 const b = anythingCanBeAny('heisann');
+
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

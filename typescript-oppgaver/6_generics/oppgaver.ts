@@ -1,5 +1,3 @@
-export {};
-
 // OPPGAVE 1 - Generiske typer
 
 // Gjør om så funksjonen returnerer samme type som man sendte inn (ikke bruk any)
@@ -37,4 +35,4 @@ const menu = {name: 'salad', price: 40}
 const menuValue = getMenyValue(menu, 'name');
 console.log(typeof menuValue); // skal gi string hvis key = 'name', number hvis key = 'price' osv
 
-
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

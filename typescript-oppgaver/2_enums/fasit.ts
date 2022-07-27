@@ -21,3 +21,5 @@ enum Kjøttype {
 // være E.Foo, så derfor vil det aldri være aktuelt å sjekke om x er lik E.Bar. For å forstå mer av
 // hvordan TypeScript klarer å fange denne inkorrekte sammenligningen av verdier kan du
 // sjekke ut https://www.typescriptlang.org/docs/handbook/enums.html#union-enums-and-enum-member-types
+
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */

@@ -46,3 +46,5 @@ export function anythingCanBeAny(anything : any) : any {
 const a: number = anythingCanBeAny(5);
 
 const b: string = anythingCanBeAny('heisann');
+
+export {}; /* Denne er med for å unngå at alt defineres i det globale skopet */
